@@ -4,7 +4,7 @@
   font-style: normal;
   src:
     local("Lato"),
-    url("../fonts/Lato-400-Regular.woff2") format("woff2"),
+    /* url("../fonts/Lato-400-Regular.woff2") format("woff2"), */
     url("../fonts/Lato-400-Regular.woff") format("woff"),
     url("../fonts/Lato-400-Regular.eot") format("eot");
   font-display: swap;
@@ -16,7 +16,7 @@
   font-style: normal;
   src:
     local("Lato"),
-    url("../fonts/Lato-700-Bold.woff2") format("woff2"),
+    /* url("../fonts/Lato-700-Bold.woff2") format("woff2"), */
     url("../fonts/Lato-700-Bold.woff") format("woff"),
     url("../fonts/Lato-700-Bold.eot") format("eot");
   font-display: swap;
@@ -28,7 +28,7 @@
     font-style: normal;
     src:
       local("Lato"),
-      url("../fonts/Lato-900-Black.woff2") format("woff2"),
+      /* url("../fonts/Lato-900-Black.woff2") format("woff2"), */
       url("../fonts/Lato-900-Black.woff") format("woff"),
       url("../fonts/Lato-900-Black.eot") format("eot");
     font-display: swap;

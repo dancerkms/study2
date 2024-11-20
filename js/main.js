@@ -9,9 +9,9 @@
 
 // Второй вариант, когда при открытии одного, закрываются
 // все остальные
-$('.program__acc-link').on('click', function (e){
+$('.program__acc-link').on('click', function (e) {
   e.preventDefault();
-  
+
   //  Если тек актив, то
   //      со всех убираем актив и все схлопываем
   //  Если тек не актив
@@ -34,9 +34,27 @@ $('.program__acc-link').on('click', function (e){
 
 
 // --- Плавный скролинг до нужного якоря --------------------
-$(".header__nav-list a, .header__top-btn, .footer__bottom-go-link").on("click", function (e) {
+$(".header__nav-list a, .header__top-btn, .footer__go-link").on("click", function (e) {
   e.preventDefault()
   var id = $(this).attr('href'),
     top = $(id).offset().top
   $('body,html').animate({ scrollTop: top }, 800)
 })
+
+
+// Открытие-закрытие меню бургер
+$('.burger, .overlay, .header__top a').on('click', function (e) {
+  e.preventDefault();
+  $('.header__top').toggleClass('header__top--open');
+  $('.overlay').toggleClass('overlay--show');
+  $('.burger').toggleClass('burger--toclose');
+})
+
+// --- Для всплывания бургера при прокручиваниии страницы вниз
+setInterval(function () {
+  if ($(window).scrollTop() > 0 && $('.header__top').hasClass('header__top--open') === false) {
+    $('.burger').addClass('burger--follow')
+  } else {
+    $('.burger').removeClass('burger--follow')
+  }
+}, 500)
